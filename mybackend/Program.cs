@@ -78,10 +78,14 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();
-
-//tambahkan middleware cors
 app.UseCors("AllowSpecificOrigin");
+app.UseRouting();
+app.UseEndpoints(endpoints =>
+{
+    app.UseCors("AllowSpecificOrigin");
+    // ...
+});
+
 
 app.UseAuthentication();
 app.UseAuthorization();

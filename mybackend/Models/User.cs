@@ -8,7 +8,7 @@ public class User
     public long OperatorId { get; set; }
 
     [JsonProperty("Nama")]
-    public string Nama { get; set; }
+    public string? Nama { get; set; }
 
     [JsonProperty("Username")]
     public string Username { get; set; }
@@ -32,6 +32,6 @@ public class User
     public long ModifiedBy { get; set; }
 
     [JsonProperty("Status")]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
 }

@@ -20,7 +20,7 @@ public class AuthController : ControllerBase
 
 
     [HttpPost("login")]
-    [EnableCors("AllowAllOrigins")]
+    [AllowAnonymous]
     public IActionResult Login([FromBody] User user)
     {
         var token = _authService.Authenticate(user.Username, user.Password);
